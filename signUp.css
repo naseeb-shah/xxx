@@ -1,0 +1,456 @@
+body{
+    margin: auto 90px auto 90px;
+    font-family:'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', system-ui, sans-serif !important;;
+    font-size: 16px;
+}
+
+
+#main_div>#top_bar{
+    background-color:#0058A3;
+    color:white;
+    padding: 16px;
+}
+#Content_section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    
+}
+#family_info{
+    width:60%;
+    padding: 10px;
+
+}
+#profile_pictures{
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: repeat(5,250px);
+    gap:10px;
+    margin-top: 50px;;
+    
+}
+
+#png1>img{
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#png2>img{
+    width:100%;
+    height:80%;
+    border-radius: 3px;
+}
+#png3>img{
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#png4>img{
+    margin-top: -25%;
+    width:100%;
+    height:80%;
+    border-radius: 3px;
+}
+#png5>img{
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#png6>img{
+    margin-top: -50%;
+    width:100%;
+    height:110%;
+    border-radius: 3px;
+}
+#png7>img{
+    
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#png8>img{
+    margin-top: -38%;
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#png9>img{
+    margin-top: -40%;
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+}
+#create_account{
+    margin-top: 100px;
+    
+}
+.instruction{
+    display: flex;
+    flex-direction: column;
+    /* padding:30px; */
+    row-gap: 35px;
+}
+
+#selection_type_account>input,label{
+    font-size: 15px;;
+}
+#last_instruction{
+    margin-left: -8px;
+}
+#input_form{
+    margin-top: 100px;;
+}
+#input_form>#form>.relative input {
+border: 0;
+outline: 0;
+width: 100%;
+position: absolute;
+
+/* background: none;*/
+background: transparent; 
+border-bottom: 1px solid black;
+
+font-family: inherit;
+
+}
+
+.relative  input:focus,
+select:focus{
+    box-shadow: 0 1px 0 #0058a3;
+    border-bottom-color: #0058a3;
+    color: #0058a3;
+}
+#input_form>#form>div select{
+border: 0;
+outline: 0;
+width: 100%;
+/* background: none;*/
+background: transparent; 
+border-bottom: 1px solid black;
+position: absolute;
+font-family: inherit;
+
+} 
+#input_form>#form{
+display: flex;
+flex-direction: column;
+gap:80px;
+
+}
+
+
+.relative,#indian_number,#select_tag,#password_div{
+position: relative;
+width: 100%;
+}
+
+.relative label {
+top: -4px
+} 
+/* input focus text isue */ 
+.relative input:valid +label
+{
+color: black;
+pointer-events: all; 
+font-size: 13px;
+ top: -30px; 
+
+position: relative;
+
+transition: all.2s ease-in-out;
+transform-origin: top left;
+
+}
+
+
+/* Mobile Tag Css */
+#input_form>#form>#indian_number input{
+border: 0;
+outline: 0;
+width: 100%;
+position: absolute;;
+
+/* background: none;*/
+background: transparent; 
+border-bottom: 1px solid black;
+font-size: 16px;
+padding-left: 70px;
+font-family: inherit;
+color: #0058a3;
+}
+
+#input_form>#form>#indian_number input+label{
+color: black;
+pointer-events: all; 
+font-size: 13px;
+top: -20px;
+position: relative;
+
+}
+#input_form>#form>#select_tag select{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    position: absolute;;
+    
+    /* background: none;*/
+    background: transparent; 
+    border-bottom: 1px solid black;
+    font-size: 16px;
+    
+    font-family: inherit;
+}
+#input_form>#form>#select_tag select +label{
+    color: black;
+    pointer-events: all; 
+    font-size: 13px;
+    top: -30px;
+    position: relative;
+    transition: all.2s ease-in;
+    transform-origin: top left;
+    }
+/* Password Tag css */
+
+#input_form>#form> .relative select{
+color: black;
+pointer-events: all; 
+font-size: 13px;
+top: -24px;
+position: relative;
+transition: all.2s ease-in-out;
+transform-origin: top left;
+}
+
+/* Terms and Conditions */
+.terms_and_condtions{
+    margin-top: 0px;
+}
+.terms_and_condtions div{
+    margin:30px;
+}
+.terms_and_condtions input:checked{
+    background-color: #a30051;
+    border-color: #15232e;
+
+}
+#terms{
+    margin-left: -10px;
+}
+.terms_and_condtions input,
+#terms>input{
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #929292;
+    width: 1.5rem;
+    height: 1.5rem;
+   
+    flex-shrink: 0;
+    align-items: center;
+    
+    justify-content: center;
+    
+}
+.terms_and_condtions label{
+   
+    position: relative;
+    bottom:5px;
+    
+}
+#submit_button{
+margin-top: 50px;
+width:450px;
+}
+
+#submit_button>button{
+    width: 100%;
+    border: 1px solid #111;
+    font-size:20px;
+    height: 3.5rem;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 40px;
+    padding: 0 2.5rem;
+
+}
+
+#submit_button>button:hover{
+    background: #333333;
+    color: #ffffff;
+    border-radius: 40px;
+}
+
+#password_div>#hint_heading{
+    font-size:13px;
+    color:black;
+}
+#password_div>#hints{
+    font-size:10px;
+   margin-left:20px;
+   color: black;
+}
+
+.text-danger{
+color:red;
+position: relative;
+top:20px;
+text-align: left;
+left: -70px;
+}
+
+#togglePassword{
+    position: relative;
+    left:80%;
+    
+    
+}
+
+@media all and (min-width:100px) and (max-width:450px) {
+    body{
+        margin: auto 5% auto 5%;
+        font-family:'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', system-ui, sans-serif !important;;
+        font-size: 16px;
+    }
+    #main_div>#top_bar{
+        background-color:#0058A3;
+        color:white;
+       
+    }
+    #Content_section{
+        display: grid;
+        grid-template-columns:  100%;
+        position: relative;
+        
+        
+    }
+    
+    #profile_pictures{
+        display: grid;
+        grid-template-columns:100%;
+        
+        
+    }
+
+    #png1>img{
+        width:100%;
+        height:100%;
+        border-radius: 3px;
+    }
+    #png2>img{
+        display: none;
+        
+    }
+    #png3>img{
+        display: none;
+        
+    }
+    #png4>img{
+        display: none;
+       
+    }
+    #png5>img{
+        display: none;
+       
+    }
+    #png6>img{
+        display: none;
+         
+    }
+    #png7>img{
+        display: none;
+       
+    }
+    #png8>img{
+        display: none;
+    }
+    #png9>img{
+        display: none;
+    }
+    #submit_button>button{
+        width: 100%;
+        border: 1px solid #111;
+        font-size:20px;
+        height: 3.5rem;
+        background: #111111;
+        color: #ffffff;
+        border-radius: 40px;
+        padding: 0 2.5rem;
+        margin-left: -80px;
+    }
+    
+}
+#container {
+    margin: auto;
+    width: 90%;
+}
+
+#container .nav-container {
+    width: 100%;
+    display: flex;
+}
+
+.nav-container .search-container img {
+
+    width: 20px;
+    position: relative;
+    left: 359px;
+    top: 4px;
+}
+
+
+#displayFlex {
+    /* margin-left: 40px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#inputbox {
+    /* width: 100%; */
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 100px;
+    border-radius: 20px;
+}
+
+#image {
+    width: 20%;
+    display: flex;
+
+}
+
+#image a img {
+
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 7px;
+}
+
+#image>div {
+    display: flex;
+
+    padding: 20px;
+}
+
+#lower_nav>nav {
+    margin-left: 40px;
+    display: flex;
+    gap: 30px;
+
+}
+
+#lower_nav>nav>div>a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* @media all and (min-width:450px) and (max-width:850px) {
+
+}
+
+@media all and (min-width:850px) and (max-width:450px) {
+
+} */

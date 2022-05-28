@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "firstName": "Naseeb",
+      "surName": "sai",
+      "id": 1,
+      "cart": [
+        {
+          "n": "MURVEL",
+          "rs": 99,
+          "url": "https://www.ikea.com/in/en/images/products/baestis-lint-roller-grey__0910870_pe708844_s5.jpg?f=xxxshttps://www.ikea.com/in/en/images/products/baestis-lint-roller-grey__0910870_pe708844_s5.jpg?f=xxxs"
+        }
+      ]
+    },
+    {
+      "firstName": "Naseeb",
+      "surName": "khan",
+      "mobile": "08708730331",
+      "birthDate": "",
+      "preStore": "",
+      "email": "1com",
+      "password": "12345678",
+      "id": 5,
+      "x": {}
+    },
+    {
+      "firstName": "naseeb",
+      "surName": "",
+      "mobile": "1234567890",
+      "birthDate": "",
+      "preStore": "",
+      "email": "1@gmal.com",
+      "password": "1234567890",
+      "id": 6
+    },
+    {
+      "firstName": "naseeb khan",
+      "surName": "",
+      "mobile": "98123456789",
+      "birthDate": "",
+      "preStore": "ajaj",
+      "email": "1@gmal.com",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "firstName": "dn",
+      "surName": "S",
+      "mobile": 870331,
+      "birthDate": "01-10-1936",
+      "preStore": "Leda khadar",
+      "email": "deen@gmail.com",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "surName": "khan",
+      "mobile": "08708730331",
+      "birthDate": "2022-05-09",
+      "gender": "Male",
+      "postalCode": "135103",
+      "preStore": "Hyderabad",
+      "email": "1234@gmail.com",
+      "password": "12345678",
+      "id": 9
+    }
+  ],
+  "slideproducts": [
+    {
+      "id": 1,
+      "n": "BASTIS",
+      "rs": 99,
+      "in": "lint roller",
+      "url": "https://www.ikea.com/in/en/images/products/murvel-shoe-organiser-grey__1090662_pe862131_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 2,
+      "n": "MURVEL",
+      "rs": 99,
+      "in": "Shoe organoser",
+      "url": "https://www.ikea.com/in/en/images/products/baestis-lint-roller-grey__0910870_pe708844_s5.jpg?f=xxxshttps://www.ikea.com/in/en/images/products/baestis-lint-roller-grey__0910870_pe708844_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 3,
+      "n": "PARKLA",
+      "rs": 179,
+      "in": "Storge case",
+      "url": "https://www.ikea.com/in/en/images/products/paerkla-storage-case__0784919_pe761939_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 4,
+      "n": "NOJIG",
+      "rs": 99,
+      "in": "lint roller",
+      "url": "https://www.ikea.com/in/en/images/products/nojig-organiser-plastic-beige__0954109_pe804512_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 5,
+      "n": "HYLLIS",
+      "rs": 99,
+      "in": "Shelving unit",
+      "url": "https://www.ikea.com/in/en/images/products/hyllis-shelving-unit-in-outdoor__0911686_pe711418_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 6,
+      "n": "SMACKER",
+      "rs": 99,
+      "in": "TRY",
+      "url": "https://www.ikea.com/in/en/images/products/smaecker-cutlery-tray-grey__0260296_pe404014_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 7,
+      "n": "NOJIG",
+      "rs": 99,
+      "in": "lint roller",
+      "url": "https://www.ikea.com/in/en/images/products/nojig-organiser-plastic-beige__0954109_pe804512_s5.jpg?f=xxxs"
+    },
+    {
+      "id": 8,
+      "n": "HYLLIS",
+      "rs": 99,
+      "in": "Shelving unit",
+      "url": "https://www.ikea.com/in/en/images/products/hyllis-shelving-unit-in-outdoor__0911686_pe711418_s5.jpg?f=xxxs"
+    }
+  ]
+}

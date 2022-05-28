@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="./login.css">
+</head>
+<style>
+    
+</style>
+<body>
+    
+
+    <div id="main_div">
+        <!-- Left page in main page  -->
+        <div id="left_side">
+            <div id="back">
+                <!-- Back arrorw and IKEA logo -->
+                <a href="./signUp.html"><img src="https://www.zippyyum.com/Content/DaPages/images/back.png"></a>
+            </div>
+
+            <div id="text_right">
+                <div><img src="https://in.accounts.ikea.com/resources/static/logo.svg" alt="Ikea logo"></div>
+
+                <!-- Center text -->
+                <div id="text_center">
+                    <h1> to your IKEA account.</h1>
+                    <p>Too many passwords?</p>
+                    <p>You can now login with an OTP we will send on your email address or verified mobile number.</p>
+                    <p>Access your IKEA account using your email address to add and verify your mobile number.</p>
+                    
+                </div>
+            <!-- text bottum ie:- footer text -->
+                <div id="text_bottum">
+                <p id="speacial_align">IKEA.in -<a href="">Cookie Policy </a> and <a href="">Privacy Policy.</a></p>
+                <p>© Inter IKEA Systems B.V. 1999-2022</p> 
+                </div>
+            </div>
+        </div>
+<!-- Right side LOGIN page Part -->
+        <div id="right_side">
+            <div id="form">
+                <p>Email or verified Mobile Number</p>
+                <input type="text" id="email_or_number">
+                <span id="email_or_number_text" class="text-danger"></span>
+                <p id="hint_text">Login <a href="./loginWithOtp.html">with an OTP</a></p>
+            </div>
+            <div id="form">
+                <p>Password</p>
+                
+                <input type="password" id="id_password">
+                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                </input>
+                <span id="id_password_text" class="text-danger"></span>
+                <p id="hint_text"><a href="./forgotPassword.html">Forgot your password?</a></p>
+
+            </div>
+<!-- Submit buttons -->
+            <div id="submit_button">
+                <button type="submit" onclick="validation()">Continue</button>
+            </div>
+            <div id="hint">
+                <p>Do not have an IKEA account? Create one now:</p>
+            </div>
+<!-- Bottom part Create an acount part -->
+            <div class="create_acount_buttons" >
+                <button type="submit" onclick="goto()">I'm buying for my home</button>
+                <button type="submit" onclick="goto()">I'm buying for my company</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+</body>
+<script src="./login.js">
+    
+</script >
+</html>

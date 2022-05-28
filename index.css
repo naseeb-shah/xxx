@@ -1,0 +1,172 @@
+
+
+
+
+
+
+#container{
+    margin: 0% 1% 0% 5%;
+}
+body{
+    box-sizing: border-box;
+}
+hr{
+    margin: 5% 0% 5% 0%;
+}
+#heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#threeCards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2%;
+}
+#threeCards>div>img{
+    width: 100%;
+}
+#threeCards>div>h2{
+    text-decoration: underline;
+}
+#downloadApp{
+    display: flex;
+    gap:2%;
+}
+#downloadApp>div>img{
+    width:100%;
+}
+.blackBT{
+    color:white;
+    background-color: black;
+    padding: 3%;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+}
+#impInfo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#impInfo>div>img{
+    width:100%;
+}
+#topCards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3%;
+    height: auto;
+}
+#topCards>div>img{
+   width:100%;
+   height:100%;
+}
+#topCards>div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:3%;
+}
+#topCards>div>div>img{
+    width: 100%;
+}
+#offerCard{
+    display: flex;
+    background-color: lightgrey;
+}
+#offerCard>div:nth-child(2){
+    margin-right: 5%;
+}
+#offerCard>div>img{
+    width:95%;
+}
+#festCard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    cursor: pointer;
+}
+#festCard>div>img{
+width: 100%;
+}
+#returnP{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    text-align: center;
+    gap: 0.1%;
+    padding: 4%;
+}
+#returnP>div{
+    background-color: #F5F5F5;
+}
+
+#container {
+    margin: auto;
+    width: 90%;
+}
+
+#container .nav-container {
+    width: 100%;
+    display: flex;
+}
+
+.nav-container .search-container img {
+
+    width: 20px;
+    position: relative;
+    left: 359px;
+    top: 4px;
+}
+
+
+#displayFlex {
+    /* margin-left: 40px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#inputbox {
+    /* width: 100%; */
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 100px;
+    border-radius: 20px;
+}
+
+#image {
+    width: 20%;
+    display: flex;
+
+}
+
+#image a img {
+
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 7px;
+}
+
+#image>div {
+    display: flex;
+
+    padding: 20px;
+}
+
+#lower_nav>nav {
+    margin-left: 40px;
+    display: flex;
+    gap: 30px;
+
+}
+
+#lower_nav>nav>div>a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+

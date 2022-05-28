@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginWithOtp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="./loginWithOtp.css">
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</head>
+<style>
+
+
+    /* #svg-icon {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+    fill: currentColor;
+    -webkit-transition-property: fill,-webkit-transform;
+    transition-property: fill,-webkit-transform;
+    transition-property: transform,fill;
+    transition-property: transform,fill,-webkit-transform;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.4,1);
+    transition-timing-function: cubic-bezier(.4,0,.4,1);
+} */
+</style>
+<body>
+    <div id="main_div">
+        <!-- Left page in main page  -->
+        <div id="left_side">
+            <div id="back">
+                <!-- Back arrorw and IKEA logo -->
+                <a href="./login.html"><img src="https://www.zippyyum.com/Content/DaPages/images/back.png"></a>
+            </div>
+
+            <div id="text_right">
+                <div><img src="https://in.accounts.ikea.com/resources/static/logo.svg" alt="Ikea logo"></div>
+
+                <!-- Center text -->
+                <div id="text_center">
+                    <h1> your OTP received from IKEA.</h1>
+                    <p>Too many passwords?</p>
+                    <p>You can now login with an OTP we will send on your email address or verified mobile number.</p>
+                    <p>Access your IKEA account using your email address to add and verify your mobile number.</p>
+                    
+                    
+                </div>
+            <!-- text bottum ie:- footer text -->
+            <div id="text_bottum">
+                <p id="speacial_align">IKEA.in -<a href="">Cookie Policy </a> and <a href="">Privacy Policy.</a></p>
+                <p>© Inter IKEA Systems B.V. 1999-2022</p> 
+                </div>
+            </div>
+        </div>
+<!-- Right side LOGIN page Part -->
+        <div id="right_side">
+            <div id="form">
+                <p>Email or verified Mobile Number</p>
+                <input type="text" id="forgot_password_request">
+                <div style="display:inline">
+                <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                    <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+                    <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+                    <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+                    <!-- <span class="splitter">&ndash;</span> -->
+                    <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+                    <input type="text" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4" />
+                    <input type="text" id="digit-6" name="digit-6" data-previous="digit-5" />
+                </form>
+            </div>
+                <span id="generateOtp">
+                    <p>Send new code</p>
+                </span>
+                <span id="login_signin">
+                    <p>Login <a href="./login.html" style=" color: #484848; ">Sign in with password</a></p>
+                </span>   
+            </div>
+            
+            <!-- <span id="error_text"></span> -->
+            
+<!-- Submit buttons -->
+            <div id="submit_button">
+                <button type="submit" onclick="forgot()">Continue</button>
+            </div>
+           
+    </div>
+</body>
+<script type="module" src="./loginWithOtp.js">
+    //import {forgot} from "./login.js"
+
+
+</script>
+</html>

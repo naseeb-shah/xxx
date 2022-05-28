@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <style>
+body {
+     margin-top: 30px;
+ }
+
+ * {
+     margin: 0px;
+     box-sizing: border-box;
+     font-family: Noto IKEA, Noto Sans, Roboto, Open Sans, sans-serif;
+
+ }
+ #headerButton{
+   
+     text-align: center;
+ }
+ #productDetails>img{
+     
+     /* background-color: #333; */
+    margin-left: 42%;
+ }
+
+   .overLay {
+       position: fixed;
+       top: 0px;
+       left: 0px;
+       width: 100%;
+       height: 100%;
+       background: hsla(0, 0%, 100%, .75);
+       opacity: 0;
+       pointer-events: none;
+   }
+
+   .popUp {
+       overflow: auto;
+       box-shadow: 0 0 7px 2px #ccc;
+       width: 60%;
+       margin: auto;
+       display: flex;
+       flex-direction: column;
+       padding: 24px 16px 40px 16px;
+       border-radius: 2px;
+       margin-top: 24px;
+       margin-bottom: 40px;
+       position: fixed;
+       top: 19%;
+       left: 50%;
+       background-color: #fff;
+       transform: translate(-50%, -50%);
+   }
+
+   .active {
+       opacity: 2;
+       pointer-events: auto;
+   }
+
+   .popUp img {
+       width: 22px;
+       cursor: pointer;
+
+   }
+
+   #heading {
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .shoppingCartItemDetail {
+       padding: 24px 0;
+       display: flex;
+       justify-content: space-between;
+       text-align: center;
+   }
+
+   .shoppingCartItemDetail>div>a:hover {
+       text-decoration: underline;
+
+   }
+
+   button {
+       text-decoration: none;
+       border: none;
+       background: #fff
+   }
+
+   a {
+       text-decoration: none;
+       color: #0058a3;
+   }
+
+   b {
+       font-size: large;
+
+
+   }
+
+   #createNewCart {
+       /* margin-bottom: 20px; */
+       padding-top: 16px;
+       padding-bottom: 16px;
+
+   }
+
+   #createNewCart>button {
+       color: #0058a3;
+   }
+
+   #createNewCart>button:hover {
+       cursor: pointer;
+       text-decoration: underline;
+   }
+
+ #buttons {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+
+ #buttons>div {
+     margin: 20px;
+
+ }
+
+ #buttons>div>a>button {
+     padding: 12px;
+     font-size: 14px;
+     width: 350px;
+     border: none;
+     color: #fff;
+    background-color: #0058a3;
+        border-color: #0058a3;
+     border-radius: 2px;
+     cursor: pointer;
+ }
+  #buttons>div>a>button:hover{
+      opacity: 0.9;
+  }
+
+ #services {
+     width: 75%;
+     margin: auto;
+     display: grid;
+     gap: 30px;
+     margin-top: 20px;
+     grid-template-columns: repeat(3, 1fr);
+ }
+
+ .innerDiv {
+     display: flex;
+     border: 1px solid rgb(189, 188, 188);
+ }
+
+ .innerDiv>div>img {
+     padding: 30px;
+ }
+
+ .policyDiv>div {
+     padding: 5px;
+ }
+
+ .policyDiv a {
+     color: #0058a3;
+     ;
+     float: right;
+     padding-right: 20px;
+ }
+
+
+ .cartDetail {
+     /* display: flex; */
+
+     justify-content: center;
+
+     gap: 10px;
+
+
+ }
+
+ .cartDetail>button img {
+     width: 22px;
+ }
+
+ .cartDetail>button {
+     border: none;
+     background-color: #fff;
+ }
+
+ .cartDetail>button:hover {
+     cursor: pointer;
+     text-decoration: underline;
+ }
+
+ .cartDetail>img {
+     width: 200px;
+     height: 200px;
+     margin: 20px;
+ }
+
+ .cartMsg {
+     color: #333;
+     text-align: center;
+     margin-bottom: 25px;
+ }
+
+ .cartMsg>a {
+     color: #0058a3;
+
+ }
+
+ .cartMsg>a:hover {
+     cursor: pointer;
+     color: black;
+    
+ }
+
+ #CreateCartContainer form{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+
+     /* background-color: blueviolet; */
+ }
+  #CreateCartContainer input{
+    font-size: .875rem;
+        line-height: 1.143;
+        color: #333;
+      padding: 10px;
+    text-decoration: none;
+    border: 1px thin black;
+    
+    
+    
+  }
+  #CreateCartContainer form>div>button {
+    box-sizing: border-box;
+    text-align: center;
+    width: 49%;
+    font-size: .875rem;
+        color: #333;
+        padding: 10px;
+        text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+
+  }
+  #createCartButton{
+      margin-left:2%;
+    border: 1px thin black;
+    background-color: #0058a3;
+  }
+  #cancelButton{
+    border: .5px solid black;
+  }
+
+  #newCart>div{
+      width: 100%;
+    display: flex;
+   
+    justify-content: space-between;
+    
+  }
+   #newCart>div>div{
+    display: block;   
+      
+   }
+
+ #deliveryOption {
+     width: 60%;
+     margin: auto;
+
+ }
+
+
+ #upperDiv {
+     display: flex;
+     justify-content: center;
+ }
+
+ #lowerDiv {
+     display: flex;
+     justify-content: space-around;
+     gap: 20px;
+
+ }
+
+ #lowerDiv button {
+     border: none;
+     background-color: #fff;
+     color: #0058a3;
+
+
+ }
+
+ #lowerDiv button:hover {
+     cursor: pointer;
+
+ }
+
+ #lowerDiv img {
+     width: 32px;
+     height: 32px;
+ }
+
+ #lowerDiv button {
+     width: 70px;
+ }
+
+ #checkDelivery input {
+     width: 100%;
+     font-size: 20px;
+     padding: 5px;
+
+     margin-bottom: 12px;
+ }
+
+ #checkDelivery button {
+     width: 50%;
+     font-size: .8125rem;
+     line-height: 37px;
+     padding: 5px;
+     background-color: #0058a3;
+     border: none;
+     color: #fff;
+     margin: auto;
+ }
+
+ #selectStore {
+     margin: auto;
+     width: 50%;
+     font-size: 20px;
+     padding: 5px;
+     display: block;
+
+     margin-bottom: 12px;
+ }
+
+ #buttonCenter {
+     text-align: center;
+
+     margin: auto;
+ }
+ #productDetails {
+     width: 60%;
+     margin: auto;
+    
+ }
+
+ #productDetails>div>div {
+     display: flex;
+     gap: 20px;
+     
+     justify-content: space-between;
+ }
+
+ #productDetails>div>div+div {
+
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ #productDetails>div>div+div button {
+     border: none;
+     background-color: #fff;
+     border: 1px solid black;
+ }
+
+ #productDetails>div>div+div select {
+     font-size: 20px;
+     width: 10%;
+ }
+
+ #productDetails>div>div>div {
+     display: flex;
+
+ }
+
+ #productDetails img {
+     padding-top: 10px;
+     width: 136px;
+     height: 136px;
+
+ }
+ #imageSize img {
+
+     width: 23px;
+     height: 23px;
+ }
+
+        #totalCartAmout>div {
+            width: 60%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #container {
+      margin: auto;
+      width: 90%;
+  }
+
+  #container .nav-container {
+      width: 100%;
+      display: flex;
+  }
+
+  .nav-container .search-container img {
+
+      width: 20px;
+      position: relative;
+      left: 359px;
+      top: 4px;
+  }
+
+
+  #displayFlex {
+      /* margin-left: 40px; */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #inputbox {
+      /* width: 100%; */
+      font-size: 20px;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 100px;
+      border-radius: 20px;
+  }
+
+  #image {
+      width: 20%;
+      display: flex;
+
+  }
+
+  #image a img {
+
+      top: -10px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      left: 7px;
+  }
+
+  #image>div {
+      display: flex;
+
+      padding: 20px;
+  }
+
+  #lower_nav>nav {
+      margin-left: 40px;
+      display: flex;
+      gap: 30px;
+
+  }
+
+  #lower_nav>nav>div>a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+  }
+
+    </style>
+    <!-- <link rel="stylesheet" href="./cart.css"> -->
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div id="container">
+                <div class="nav-container">
+                    <a href="./index.html" style="margin-right: 30px;">
+                        <img src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" />
+                    </a>
+                    <div id="displayFlex">
+                        <div class="search-container">
+                            <img id="search_img"
+                                src="https://www.clipartmax.com/png/full/345-3454251_search-icon-html-code-search-icon-for-html.png=" alt="">
+                            <img id="camara_img"
+                                src="data:image/png;base64,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"
+                                alt="">
+                           <input type="text" placeholder="what are you looking for" id="inputbox">
+                        </div>
+                        <div id="image">
+                            <div>
+                                <a href="" id="username"><img src="https://www.logolynx.com/images/logolynx/4b/4beebce89d681837ba2f4105ce43afac.png" alt=""></a>
+                                <!-- <a href=""><img src="https://www.logolynx.com/images/logolynx/4b/4beebce89d681837ba2f4105ce43afac.png" alt=""></a> -->
+                            </div>
+                            <div>
+                                <a href="../tracking/tracking.html"><img
+                                        src="data:image/png;base64,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"
+                                        alt=""></a>
+                            </div>
+                           <div>
+                            <a href="../cart.html"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRCkLN7bqvDPYHZ4_1LlsaYeHPcDN5-7rDw&usqp=CAU"
+                                    alt=""></a>
+                           </div>
+                          
+                        </div>
+                    </div>
+                   
+                </div>
+    
+                <div id="lower_nav">
+                    <nav>
+                        <div>
+                            <a href="./products.html">Products</a>
+                        </div>
+                                
+                            <div>
+                                <a href="">Rooms</a>
+                            </div>
+                         <div>
+                            <a href="https://www.ikea.com/in/en/news/">New at IKEA</a>
+                         </div>
+                               
+                       <div>
+                        <a href="https://www.ikea.com/in/en/offers/">All offers</a>
+                       </div>
+                               
+                      
+                    </nav>
+                </div>
+                <hr>
+            </div>
+        </header>
+    </div>
+
+    <div id="container">
+        <div class="overLay">
+            <div class="popUp">
+                <div id="heading">
+                    <div>
+                        <b>Your shopping </b>
+                    </div>
+                    <div>
+                        <button id="closePopUpButton"><a href="./cart.html"> <img
+                                    src="https://order.ikea.com/in/en/checkout/static/media/cross-thin-24.8c36c8c5.svg"></a></button>
+                    </div>
+
+                </div>
+                <div class="shoppingCartItemDetail">
+                    <div>
+                        <a href="./cart.html"> Shopping cart</a>
+                    </div>
+                    <div>
+                        <button class="changeCartName"><img
+                                src="https://order.ikea.com/in/en/checkout/static/media/edit-thin-24.ca4fff8f.svg"></button>
+                        <button><img
+                                src="https://order.ikea.com/in/en/checkout/static/media/remove-thin-24.16c1cc7a.svg"></button>
+                    </div>
+
+                </div>
+                <div id="newCart" class="shoppingCartItemDetail">
+
+                </div>
+                <div id="createNewCart">
+                    <button>
+                        <img
+                            src="https://order.ikea.com/in/en/checkout/static/media/content-more-thin-24-blue.7e655fff.svg">
+                        <span>Create a new cart </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="CartCont">
+            <div class="cartDetail" id="headerButton">
+                <button >
+                    <h1>Shopping Cart
+                        <img src="https://order.ikea.com/in/en/checkout/static/media/chevron-down-thin-24.1667eab2.svg"
+                            alt="">
+                    </h1>
+                </button>
+                <span id="cartItemsDetailsBox">
+                    <button><span><img style="width: 30px;"
+                                src="https://order.ikea.com/in/en/checkout/static/media/print-24.3eb25bf2.svg"></span></button>
+            </div>
+            <div class="cartDetail" id="productDetails">
+                <img src="https://order.ikea.com/in/en/checkout/static/media/ill-alien.cb42647f.svg" alt="">
+            </div>
+            <div class="cartMsg">
+                <p>Your cart is empty!</p>
+                <p>Login to see what you already added</p>
+            </div>
+
+            <div class="cartMsg">
+                <a href="../Login/signUp.html">Create an account</a>
+            </div>
+            </span>
+
+        </div>
+
+
+
+        <div id="buttons">
+            <div id="browserButton">
+                <a href="../index.html"><button>Browser our products</button></a>
+            </div>
+            <div id="loginButton">
+                <a href="../Login/login.html"><button>Log in</button></a>
+            </div>
+        </div>
+        <div id="totalCartAmout"></div>
+        <div id="temp">
+
+        </div>
+        
+        
+        </div>
+        <div id="services">
+            <div class="innerDiv">
+                <div>
+                    <img src="https://www.ikea.com/images/delivery-2c377c3cc69640f749013836110d40ad.jpg">
+                </div>
+                <div class="policyDiv">
+                    <div>
+                        <b>Our Delivery Service</b>
+                        <br>
+                        Safe & contact-less delivery according to government permission.
+                    </div>
+                    <div>
+                        <a href="#">More info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="innerDiv">
+                <div>
+                    <img src="https://www.ikea.com/images/delivery-014ad6216fa3d6d633f4be02a031b03b.jpg">
+                </div>
+                <div class="policyDiv">
+                    <div>
+                        <b>Our Return Policy</b>
+                        <br>
+                        We have made some updates to our return policy due to the COVID 19 situation.
+                    </div>
+                    <div>
+                        <a href="#">More info</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="innerDiv">
+                <div>
+                    <img src="https://www.ikea.com/images/service-be6f35e18f0f32db81888e1f8c2bc401.jpg">
+                </div>
+                <div class="policyDiv">
+                    <div>
+                        <b>Our Assembly Service</b>
+                        <br>
+                        Sometimes it is nice to have someone else assemble it for you.
+                    </div>
+                    <div>
+                        <a href="#">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script >
+    curname=localStorage.getItem('name')
+   if(curname!=null){
+     document.getElementById('username').innerText=curname
+     document.getElementById('xxx').style.display='none'
+   }
+    const temp = ()=>{
+    return ` <div id="deliveryOption">
+        <div id="upperDiv">
+           <h3>How would you like to receive your order?</h3> 
+        </div>
+        <div id="lowerDiv">
+            <div>
+                <button id="pinCode"><img src="https://order.ikea.com/in/en/checkout/static/media/ws-home-delivery-blue.ff16e8a8.svg" alt="">Home delivery</button>
+            </div>
+            <div>
+                <button id="shop"><img src="https://order.ikea.com/in/en/checkout/static/media/ws-click-and-collect.6cad58e4.svg" alt="">Click & collect</button>
+            </div>
+            </div>
+            <hr>
+            <div id="checkDelivery">
+                </div>`
+            }
+            
+            var sum =0
+let login =1;
+if(login==1){
+    document.querySelector("#temp").innerHTML=temp();
+    document.querySelector("#loginButton").style.display="none";
+    document.querySelector(".cartMsg>a").style.display="none";
+}
+let cart = 1;
+
+var data = fetch('http://localhost:3000/users/1')
+.then((x) => x.json())
+.then((x) => {
+    if (cart == 1) {
+    document.querySelector(".cartMsg").style.display="none";
+    document.querySelector("#browserButton").style.display="none";
+    
+    display(x.cart);
+}
+
+})
+
+
+let productDetails = document.querySelector("#productDetails");
+function display(d) {
+    console.log(d)
+    productDetails.innerHTML="";
+    d.forEach((element,i )=> {
+        sum+=element.rs
+        let mainbox = document.createElement("div");
+        mainbox.setAttribute("id", "mainDiv")
+
+        let div1 = document.createElement("div");
+        div1.setAttribute("class", "upper")
+
+        let div2 = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = `${element.url}`;
+
+        div2.append(image);
+
+        let div3 = document.createElement("div");
+        let productName = document.createElement("h3");
+        productName.innerHTML = `${element.n}`;
+
+        let productUse = document.createElement("p");
+        productUse.innerHTML = "Bath mat";
+
+        let productColor = document.createElement("p");
+        productColor.innerHTML = "dark grey";
+
+        let productDimension = document.createElement("p");
+        productDimension.innerHTML = `50x80 cm (20x32") 205.079.89`;
+
+        div3.append(productName, productUse, productColor, productDimension);
+        let div4 = document.createElement("div");
+        let productPrice = document.createElement("h3");
+        productPrice.innerHTML = `Rs${element.rs}`;
+        div4.append(productPrice);
+        let div7 = document.createElement("div");
+        div7.append(div2, div3)
+        div1.append(div7, div4);
+
+        let div5 = document.createElement("div");
+
+        div5.setAttribute("class", "lower");
+
+
+        let div6 = document.createElement("div");
+        let button = document.createElement("button");
+        button.setAttribute("id", "imageSize")
+        let productQunatity = document.createElement("select");
+        let opt1 = document.createElement("option")
+        opt1.innerHTML = "1";
+        let opt2 = document.createElement("option")
+        opt2.innerHTML = "2";
+        let opt3 = document.createElement("option")
+        opt3.innerHTML = "3";
+        let opt4 = document.createElement("option")
+        opt4.innerHTML = "4";
+        productQunatity.append(opt1, opt2, opt3, opt4);
+        let deleteButton = document.createElement("img");
+        deleteButton.src = "	https://order.ikea.com/in/en/checkout/static/media/remove-thin-24.16c1cc7a.svg";
+        button.append(deleteButton);
+        button.addEventListener("click",()=>{
+            console.log(i)
+   d.splice(i,1)
+   order(d)
+        })
+        div6.append(button, productQunatity);
+        div6.setAttribute("id", "flexProp")
+        mainbox.append(div1, div6)
+        let hr = document.createElement("hr");
+        productDetails.append(mainbox, hr);
+
+    }); 
+totatCart(sum)
+    console.log(sum) 
+}
+console.log(sum)
+function order(cart){
+      console.log(cart)
+    x={
+     "cart":cart
+   }
+    var update= fetch('http://localhost:3000/users/1',{
+      method: "PATCH",
+                body: JSON.stringify(x),
+                headers: {
+                    'Content-Type': "application/json"
+                }
+    })
+    // window.location.href='./cart.html'
+  }
+
+
+
+function totatCart(x) {
+    let box = document.createElement("div");
+
+    let hr = document.createElement("hr");
+    hr.style.textDecoration = "dashed"
+    let h2 = document.createElement("h3");
+    h2.innerHTML = "Subtotal";
+console.log(sum,"rechedc")
+    let h1 = document.createElement("h3");
+    h1.innerHTML = `Rs. ${x}.00`;
+    box.append(h2, h1);
+    document.querySelector("#totalCartAmout").append(box)
+
+}
+document.querySelector("#pinCode").addEventListener("click", () => {
+    document.querySelector("#checkDelivery").innerHTML = "";
+    let box = document.createElement("div");
+    box.setAttribute("id", "applyStyle")
+    let para = document.createElement("p")
+    para.innerHTML = "Enter a PIN code to see product availability and delivery options.";
+    let inputbox = document.createElement("input");
+    let proceedButton = document.createElement("button");
+   
+    proceedButton.innerText = "Proceed";
+     proceedButton.addEventListener("click", () => {
+        location.href = "./payment.html"
+    })
+    box.append(para, inputbox, proceedButton);
+    document.querySelector("#checkDelivery").append(box);
+})
+
+document.querySelector("#shop").addEventListener("click", () => {
+    document.querySelector("#checkDelivery").innerHTML = "";
+
+    let box = document.createElement("div");
+    box.setAttribute("id", "buttonCenter")
+    let select = document.createElement("select");
+
+    select.setAttribute("id", "selectStore")
+    let opt1 = document.createElement("option");
+    opt1.innerHTML = "Select store";
+
+    let opt2 = document.createElement("option");
+    opt2.innerHTML = "IKEA Hyderabad";
+
+    let opt3 = document.createElement("option");
+    opt3.innerHTML = "IKEA Navi Mumbai";
+    select.append(opt1, opt2, opt3);
+
+    let proceedButton = document.createElement("button");
+    proceedButton.addEventListener("click",()=>{
+        location.href = "./payment.html"
+    })
+    proceedButton.innerText = "Click & collect";
+    box.append(select, proceedButton);
+    document.querySelector("#checkDelivery").append(box);
+})
+
+
+
+let createCart = document.querySelector("#createNewCart>button");
+let createCart1 = document.querySelector("#createNewCart");
+
+let changeCartName = document.querySelector(".changeCartName");
+let newCart = document.querySelector("#newCart")
+
+createCart.addEventListener("click",()=>{
+    createCart1.innerHTML="";
+    let box = document.createElement("div");
+    let form = document.createElement("form")
+
+    box.setAttribute("id","CreateCartContainer")
+
+    let nameOfCart = document.createElement("label")
+    nameOfCart.innerText = "Name:"
+    
+    let nameInput = document.createElement("input")
+    nameInput.setAttribute("id","nameOfCart")
+
+    let box1 = document.createElement("div");
+    
+    let cancelButton = document.createElement("button")
+    cancelButton.setAttribute("id","cancelButton")
+    cancelButton.addEventListener("click",()=>{
+
+
+
+    })
+    cancelButton.innerText="Cancel";
+
+    let createCartButton = document.createElement("button")
+    createCartButton.addEventListener("click",createNewCart)
+
+
+    createCartButton.setAttribute("id", "createCartButton")
+    createCartButton.innerHTML = "Create new cart";
+    box1.append(cancelButton,createCartButton)
+
+    form.append(nameOfCart,nameInput,box1)
+    box.append(form)
+   
+    createCart1.append(box);
+
+    
+})
+
+
+
+
+function createNewCart(){
+    event.preventDefault();
+    let parent = document.createElement("div"); 
+    let box = document.createElement("div");
+
+    // let hr = document.createElement("hr")
+
+    let a = document.createElement("a")
+    a.href = "./cart.html";
+    a.innerHTML = document.querySelector("#nameOfCart").value;
+
+    box.append(a);
+
+    let box1 = document.createElement("div");
+
+    let button1 = document.createElement("button")
+    button1.setAttribute("class","changeCartName")
+    button1.addEventListener("click",()=>{
+        
+        button1.style.display="none"
+    })
+
+    let image1 = document.createElement("img")
+    image1.src = "https://order.ikea.com/in/en/checkout/static/media/edit-thin-24.ca4fff8f.svg";
+    button1.append(image1);
+
+
+
+    let button2 = document.createElement("button")
+   
+    let image2 = document.createElement("img")
+    image2.src = "https://order.ikea.com/in/en/checkout/static/media/remove-thin-24.16c1cc7a.svg";
+    button2.append(image2);
+
+    box1.append(button1,button2);
+
+    parent.append(box,box1);
+    
+    newCart.append(parent);
+}
+
+
+
+
+
+let overlay = document.querySelector(".overLay");
+let closePopupButton = document.querySelector("#closePopUpButton");
+let openPopupButton = document.querySelector(".cartDetail>button")
+
+openPopupButton.addEventListener("click",function(){
+   overlay.classList.add("active");
+
+
+})
+closePopupButton.addEventListener("click", () => {
+    overlay.classList.remove("active");
+})
+
+</script>
+
+</html>

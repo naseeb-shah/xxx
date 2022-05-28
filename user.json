@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "surname": "Dommara",
+      "number": "8498066494",
+      "birthaday": "1999-05-07",
+      "gender": "Male",
+      "postalCode": "515001",
+      "preferedStore": "Hyderabad",
+      "email": "test@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "surname": "venky",
+      "number": "56754675676",
+      "birthaday": "2022-05-04",
+      "gender": "Male",
+      "postalCode": "53453",
+      "preferedStore": "Hyderabad",
+      "email": "enjarappachinni123@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "surname": "rytrty",
+      "number": "6456456575",
+      "birthaday": "2022-05-18",
+      "gender": "Male",
+      "postalCode": "2343245345",
+      "preferedStore": "Hyderabad",
+      "email": "venkatesulu_pw1_178@masai.school",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "surname": "fghfdghg",
+      "number": "123444444",
+      "birthaday": "2022-05-11",
+      "gender": "Female",
+      "postalCode": "515001",
+      "preferedStore": "Hyderabad",
+      "email": "dommaravenkatesulu22@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "surname": "dfgdfgdf",
+      "number": "123444444",
+      "birthaday": "2022-05-09",
+      "gender": "Male",
+      "postalCode": "53453",
+      "preferedStore": "Hyderabad",
+      "email": "dommara_pw2_130@masai.school",
+      "password": "123455",
+      "id": 5
+    },
+    {
+      "surname": "5345345",
+      "number": "354345345",
+      "birthaday": "2022-05-03",
+      "gender": "Male",
+      "postalCode": "53453",
+      "preferedStore": "Hyderabad",
+      "email": "test44@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "surname": "ghjghjg",
+      "number": "2123234342",
+      "birthaday": "2022-05-18",
+      "gender": "Female",
+      "postalCode": "1233333",
+      "preferedStore": "Hyderabad",
+      "email": "test55@gmail.com",
+      "password": "111111",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/9ad79c0b91.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA.com Global</title>
+</head>
+<style>
+    .box {
+        background-color: rgb(247, 247, 247);
+        width: 27%;
+        /* border: 2px solid black; */
+        border-radius: 10Px;
+         position: fixed;
+right:0;
+padding: 2%;
+font-size: Roboto;
+font-size: 16px;
+        
+/*right:0;
+        top:1; */
+        /* display: none;  */
+
+    }
+
+    .link>a {
+        text-decoration: none;
+        margin: 5%;
+        font-size:16px;
+
+    }
+
+    .box>:nth-child(2) {
+        border-radius: 10px 10px 10px;
+        position: relative;
+        margin: 5%;
+        padding: 5%;
+        width: 80%;
+        background-color: yellow;
+    }
+
+    .search {
+         display: none; 
+    }
+
+    .content {
+
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    p:hover {
+        background-color: rgb(247, 247, 11)
+    }
+
+    input {
+        height: 25px;
+        width: 90%;
+        position: relative;
+        margin: auto;
+    }
+
+    p {
+        height: 35px;
+
+        /* border:2px solid black; */
+        margin: auto;
+        width: 90%;
+    }
+
+    .x {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    body {
+        font-family: Roboto, "Open Sans", system-ui, sans-serif;
+        background-color: rgb(247, 247, 247);
+    }
+
+    .navbar {
+        /* border: red solid 2px; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .navbar>a,
+    img {
+        height: 50px;
+    }
+
+    .mid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: max-content;
+        /* border: 1px red solid; */
+        overflow: hidden;
+    }
+
+    .mid>div {
+        /* border: 2px blue solid; */
+        margin: 10px;
+    }
+
+    .leftMd {
+        border-radius: 20px 20px 20px 20px;
+        /* background:yellow; */
+        width: 27%;
+
+    }
+
+    .go {
+        padding-top: 40%;
+        padding-left: 20%;
+        padding-bottom: 40%;
+        position: relative;
+
+        /* ackground-color: blue; */
+
+    }
+
+    .center {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .a {
+        width: 100%;
+        height: 300px;
+    }
+
+    #footer {
+        width: 100%;
+        background-color: rgb(0, 88, 163);
+        height: 300px;
+    }
+
+    .info {
+        padding: 5%;
+        display: flex;
+        margin-left: 10%;
+
+    }
+
+    .info>a {
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+
+    }
+
+    .last {
+        display: flex;
+        font-size: 16px;
+        color: white;
+        justify-content: space-between;
+
+    }
+
+    .last {
+        margin: 10px;
+    }
+
+    .jai {
+        display: fle;
+    }
+
+    #gap:hover {
+        margin-left: 25px;
+    }
+
+    .v {
+        width: 65%;
+    }
+
+    video {
+    
+        width: 100%;
+        /* border-radius: 20px 20px 20px 20px; */
+    }
+
+    .go>div>a {
+        text-decoration: none;
+        color: black
+    }
+    .bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: black;
+}
+    
+
+
+
+
+</style>
+
+<body>
+    <div class="navbar">
+        <a href="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZAQQ7agB5AqrgOcxAkx5lzjQcD51cXaE9Q&usqp=CAU"
+                alt=""></span>
+        </a>
+
+        <img id='expolre' style="height: 30px;padding-top:10px"
+            src="https://cdn-icons-png.flaticon.com/128/633/633647.png" alt="">
+    </div>
+    <div class="mid">
+        <div  id="v"class="v">
+
+            <video src="https://www.ikea.com/global/en/images/Book_start_de0c20b0b8.mp4" autoplay controls></video>
+       <!-- <h1 class=".bottom-left ">The new book:You or our Plannet</h1> -->
+        </div>
+        <div  id="leftMd" class="leftMd" style="background-color:yellow">
+            <div class="go">
+                <div>
+
+                    <a style="text-decoration:none" href="./index.html">
+                        <h1>Go shopping <i id="gap" class="fa-solid fa-arrow-right"></i> </h1>
+                    </a>
+                </div>
+
+            </div>
+            <div  id='ch'class="search">
+
+                <p><input type="text" placeholder="Find online store"></i>">
+                </p>
+
+                <p style="padding-left: 5%;">ikea.kr(ENGLISH)</p>
+                <p style="padding-left: 5%;">ikea.jp(Nhinango)</p>
+
+                <p style="padding-left: 5%;"> ikea.jp(ENGLISH)</p>
+                <p style="padding-left: 5%;">ikea.jp(ENGLISH)</p>
+
+
+            </div>
+            
+            <hr>
+            <div class="jai">
+                <p id="xy" class="xy" style="text-align: center;">online store:<strong> ikea.in </strong>
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </p>
+            </div>
+        </div>
+        <div id='box'class="box">
+            <div class="x">
+                <div><img style="width: 50px; height:30px;"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZAQQ7agB5AqrgOcxAkx5lzjQcD51cXaE9Q&usqp=CAU"
+                        alt=""></div>
+                <div style=" padding-right:5%"> <button id="close">X</button></div>
+            </div>
+            <div class="hideGO">
+                <div>
+                    <a style="text-decoration:none;text-align: center;" href="">
+                        <h1>Go shopping <i id="gap" class="fa-solid fa-arrow-right"></i> </h1>
+                    </a>
+                </div>
+                <hr>
+                <div  id='search'class="search">
+
+                    <p><input type="text" placeholder="Find online store>">
+                    </p>
+
+                    <p style="padding-left: 5%;">ikea.kr(ENGLISH)</p>
+                    <p style="padding-left: 5%;">ikea.jp(Nhinango)</p>
+
+                    <p style="padding-left: 5%;"> ikea.jp(ENGLISH)</p>
+                    <p style="padding-left: 5%;">ikea.jp(ENGLISH)</p>
+
+
+                </div>
+                <div>
+                    
+
+                        <p  id="x" classs='xy'tyle="text-align: center;">online store:<strong> ikea.in </strong>
+                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        </p>
+                    
+                </div>
+            </div>
+            <div class="link">
+                <p>Other IKEA sites</p>
+                <a href="">About IKEA</a> <br>
+                <a href="">IKEA Museum</a><br>
+                <a href="">International sales</a>
+            </div>
+            <div class="link" style="margin-top: 10%;">
+                <a href=>Cookie information</a>
+                <br>
+                <a href=""> Privacy statement</a>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+    <div class="tag">
+        <h1 style="text-align: center;">A world of inspiration for your home</h1>
+        <img class="center"
+            src="data:image/png;base64,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"
+            alt="">
+
+    </div>
+    <img class='a' src="C:\Users\arrow\Desktop\assgin\ikea\Screenshot 2022-05-23 123147.png" alt="">
+
+    <div id="footer">
+        <div class="info">
+            <a href="">International sales |</a>
+            <a href="">About IKEA |</a>
+            <a href="">IKEA Museum|</a>
+            <a href="">Work With us|</a>
+            <a href="">Ethics & Integrity |</a>
+        </div>
+        <div class="last">
+            <h2>© Inter IKEA Systems B.V. 1999 - 2022</h2>
+            <h3>Cookie information Privacy statement</h3>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    var ex = document.getElementById("expolre")
+    ex.addEventListener('click', () => {
+    box=document.getElementById('box')
+v=document.getElementById('v')
+    mid=document.getElementById('leftMd')
+    if( box.style.display=='none'){
+        v.style.width='50%'
+        mid.style.width='30%'
+        box.style.display='block'
+    }
+    else{
+        v.style.width='65%'
+        mid.style.width='30%'
+        box.style.display='none'
+    }
+    })
+
+document.getElementById('close').addEventListener('click',()=>{close()})
+    function close(){
+        // {
+            box=document.getElementById('box')
+            console.log("called")
+        box.style.display='none'
+    // }
+    }
+    
+    document.getElementById('x').addEventListener('click',()=>{search('search')}
+    )
+    
+    
+    document.getElementById('xy').addEventListener('click',()=>{search('ch')}
+    )
+    function search(b){
+        var x=document.getElementById(b)
+        
+        console.log(x)
+         if(x.style.display=='none'){
+x.style.display='block'
+         }else{
+             x.style.display='none'
+         }
+    }
+
+</script>
+
+</html>
